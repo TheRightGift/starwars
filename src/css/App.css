@@ -1,0 +1,156 @@
+:root{
+  --primary:#fdac0c;
+  --secondary:#000000;
+  --white:#ffffff;
+}
+::-webkit-scrollbar {
+  width: 5px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 7px rgba(0,0,0,0.8);*/
+  background-color: var(--primary);
+  /*border-radius: 8px;*/
+} /* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 100px var(--primary);
+  background-color: var(--primary); 
+  /*border-radius: 8px;*/
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+  height: 0;
+  /* background-color: rgba(0,151,0,1);*/
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+  background-color: var(--secondary);
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(255, 255, 255, 1);	
+}
+::-webkit-scrollbar-button:horizontal {
+  width: 5px;
+/* Select the down or left scroll button when it's being hovered by the mouse */
+}
+
+body {
+  max-height: 100vh;
+}
+.gutter {
+  margin: 3vh 0;
+}
+.error {
+  padding: 0.3vh 1.5vw;
+  font-size: 0.9rem;
+  background-color: red;
+  color: #ffffff;
+  width: 50%;
+  margin: 0 auto;
+}
+.App {
+  height: 100vh;
+  background-image: url('../img/starwarsBkgrd.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+.rightRow {
+  justify-content: end;
+}
+.yellow {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.App select {
+  padding: 1vh;
+}
+.App select.smSelect {
+  margin-left: 0.6vw;
+  padding: 0.5vh;
+}
+.selectedMovie {
+  width: 60%;
+  margin: 0 auto;
+  background-color: var(--white);
+  position: relative;
+  top: 10vh;
+  max-height: 70vh;
+  overflow: scroll;
+  padding: 5vh;
+}
+.selectedMovie h1 {
+  margin-top: 0;
+}
+.charactersTable {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+.nameCol {
+  width: 70%;
+}
+.centerText {
+  text-align: center;
+}
+.rightText {
+  text-align: right;
+}
+th, td {
+  padding: 10px;
+}
+.colHeader {
+  color: cornflowerblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+tr.summaryRow {
+  background-color: var(--secondary);
+}
+td.summary {
+  color: var(--primary);
+  padding: 20px 10px;
+}
+.bottom {
+  position: absolute;
+  bottom: 10px;
+}
+.loaderRow {  
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255,255,255,0.2);
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+.loader {
+  border: 0.5vh solid rgba(253,172,12, 0.2); 
+  border-top: 0.5vh solid var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.movieSelectRow {
+  width: 100vw;
+}
+select * {
+  background-color: var(--white);
+}
+
+@media only screen and (max-width: 480px) {
+  
+}
