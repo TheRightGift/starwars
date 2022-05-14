@@ -97,6 +97,7 @@ function App() {
             setSelectedMovieCharatersTotalHeight(totalHeight)
           }
         }
+        setIsLoading(false);
       })
       .catch(err => {
         setError(true);
@@ -112,7 +113,7 @@ function App() {
     
     setSelectedMovieCharaters(movieCharacters);
     setCharacters(movieCharacters);
-    setIsLoading(false);
+    
   }
 
   let sortBy = (col) => {
